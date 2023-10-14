@@ -1,0 +1,81 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+import logo from "../../public/favicon.png";
+import { Image } from "astro:assets";
+import playstoreLogo from "../../public/playstore.svg";
+---
+
+<header>
+  <nav>
+    <h2>
+      <a href="/"
+        ><Image class="logo" height={32} src={logo} alt="Optimum logo" />{
+          SITE_TITLE
+        }</a
+      >
+    </h2>
+    <div class="internal-links">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+    </div>
+    <div class="social-links">
+      <a
+        href="https://play.google.com/store/apps/details?id=com.stephenprn.habits"
+        target="_blank"
+      >
+        <span class="sr-only">Download Optimum app on Android</span>
+        <Image src={playstoreLogo} alt="Playstore logo" height={32} />
+      </a>
+    </div>
+  </nav>
+</header>
+<style>
+  header {
+    margin: 0;
+    padding: 0 1em;
+    background: white;
+    box-shadow: 0 2px 8px rgba(var(--black), 5%);
+  }
+  h2 {
+    margin: 0;
+    font-size: 1em;
+  }
+
+  .logo {
+    margin-right: 0.5em;
+  }
+
+  h2 a,
+  h2 a.active {
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav a {
+    padding: 1em 0.5em;
+    color: var(--black);
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+  }
+  nav a.active {
+    text-decoration: none;
+    border-bottom-color: var(--accent);
+  }
+  .social-links,
+  .social-links a {
+    display: flex;
+  }
+  @media (max-width: 720px) {
+    .social-links {
+      display: none;
+    }
+  }
+</style>

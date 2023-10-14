@@ -1,0 +1,57 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <h1>Welcome to Optimum 🎯</h1>
+      <h2>Your guide to healthy habits and a fulfilling life</h2>
+
+      <p>
+        🌱 Welcome to <a
+          href="https://play.google.com/store/apps/details?id=com.stephenprn.habits"
+          target="_blank">Optimum</a
+        >, your go-to resource for navigating through the journey of wellness
+        and productivity through healthy habits. Discover proven strategies,
+        practical tips, and inspiring testimonials that will propel you towards
+        a more balanced and joyful life.
+      </p>
+      <p>
+        🍏 Whether you wish to adopt a balanced diet, master a restorative sleep
+        routine, or build iron discipline in your physical training, we are here
+        to guide you at every step of your journey towards a fulfilling life.
+      </p>
+      <p>
+        📘 Explore our blog for insight-rich articles, motivating case studies,
+        and familiarize yourself with innovative tools like the <a
+          href="https://play.google.com/store/apps/details?id=com.stephenprn.habits"
+          target="_blank">Optimum</a
+        > 📱 app, designed to accompany and optimize your daily routines for
+        increased well-being and productivity.
+      </p>
+      <p>
+        👥 Join our caring community and start your journey towards healthy
+        habits, flourishing productivity, and sustainable well-being with <a
+          href="https://play.google.com/store/apps/details?id=com.stephenprn.habits"
+          target="_blank">Optimum</a
+        > today. Navigate through our blog, enrich your knowledge, and download
+        the
+        <a
+          href="https://play.google.com/store/apps/details?id=com.stephenprn.habits"
+          target="_blank">Optimum</a
+        > app to kick start your journey towards a healthier and more satisfying
+        life!
+      </p>
+    </main>
+    <Footer />
+  </body>
+</html>
